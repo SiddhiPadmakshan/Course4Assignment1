@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ming’s Diner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!--Font Awesome Icons-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="images/bowl-food-solid.svg">
+    <script>
+      $(document).ready(function(){
+             $('a').click(function() {
+             $("a.active").removeClass("active");
+             $(this).addClass('active');
+ });
+      });
+ 
+     </script>
+  </head>
+  <body>
+    <div id="menu">
+      <nav
+        class="navbar navbar-expand-sm bg-dark text-white navbar-dark fixed-top"
+      >
+        <div class="container-fluid justify-content-center">
+          <ul class="navbar-nav justify-items">
+            <li class="nav-item mr-3 pr-3">
+              <a class="nav-link" href="/" style="font-weight: 500"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown mr-3 pr-3">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-outline-info dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  style="
+                    font-weight: 500;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                      'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                  "
+                >
+                  Menu
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="index.html#bestSellerTag"
+                      style="font-weight: 500"
+                      >Current Best Sellers</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="index.html#offersTag"
+                      style="font-weight: 500"
+                      >Current Offers</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="menu.html"
+                      style="font-weight: 500"
+                      >Full Menu</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item mr-3 pr-3">
+              <a class="nav-link" href="#footer" style="font-weight: 500"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item mr-3 pr-3">
+              <a class="nav-link" href="#footer" style="font-weight: 500"
+                >Location & Hours</a
+              >
+            </li>
+            <li class="nav-item mr-3 pr-3">
+              <a class="nav-link" href="#footer" style="font-weight: 500"
+                ><i class="fa fa-solid fa-shopping-cart" style="font-size: 15px; padding-right: 3px;"></i>Cart</a
+              >
+            </li>
+            <li class="nav-item mr-3 pr-3">
+              <a class="nav-link" href="signInPage.html" style="font-weight: 500"
+                ><i class="fa fa-solid fa-user-circle-o" style="font-size: 15px; padding-right: 3px;"></i>Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div
+        id="carouselExampleCaptions"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video
+        autoplay
+        muted
+        loop
+        id="myVideo"
+        style="
+          background-size: cover;
+          height: 80vh;
+          width: 100em;
+          background-color: black;
+          margin: none;
+          padding:none;
+        "
+      >
+        <source
+          src="/videos/menuVideo1.mp4"
+          type="video/mp4"
+        />
+      </video>
+          </div>
+          <div class="carousel-item">
+            <video
+        autoplay
+        muted
+        loop
+        id="myVideo"
+        style="
+          background-size: cover;
+          height: 80vh;
+          width: 100em;
+          background-color: black;
+          margin: none;
+          padding:none;
+        "
+      >
+        <source
+          src="/videos/menuVideo2.mp4"
+          type="video/mp4"
+        />
+      </video>
+          </div>
+          <div class="carousel-item">
+            <video
+        autoplay
+        muted
+        loop
+        id="myVideo"
+        style="
+          background-size: cover;
+          height: 80vh;
+          width: 100em;
+          background-color: black;
+          margin: none;
+          padding:none;
+        "
+      >
+        <source
+          src="/videos/menuVideo3.mp4"
+          type="video/mp4"
+        />
+      </video>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <span
+        class="h3 text-center"
+        id="menu"
+        style="
+          display: inline-block;
+          width: 100%;
+          
+          border-top: black solid 7px;
+          margin-top: -0.4%;
+        "
+        ><span
+          style="
+            color: whitesmoke;
+            background-color: black;
+            padding: 2px 60px 15px 60px;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+              serif;
+          "
+          >Our Menu</span
+        >
+      </span>
+      <br><br>
+
+      <script>
+      function autoClick(e){
+        let id = String(e);
+      let autoButton = document.getElementById("closeId"+id);
+      autoButton.click();
+      swal("Good job!", "Item Added to the Cart!", "success");
+      }
+      </script>
+     
+      <table class="table table-striped table-responsive table-bordered border-muted" style="text-align:center; width: 60%; margin: 0 auto;">
+        <thead class="table">
+            <tr>
+              <th colspan="2" class="table-active" style="background-color: black; color: whitesmoke;">Items</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="menuFood1"><img class="menuImage1" src="images/offerFood1.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName1">Kung Pao Chicken</div>
+              <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" id="0">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Kung Pao Chicken</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/offerFood1.jpg" />
+                  <h3 class="card-header text-center">Kung Pao Chicken</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" onclick="autoClick(1)" style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId1"  data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+
+              </td>
+              <td class="menuFood2"><img class="menuImage2" src="images/bestSeller3.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName2">Peking Roast Duck</div>
+              <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="1">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Peking Roast Duck</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/bestSeller3.jpg" />
+                  <h3 class="card-header text-center">Peking Roast Duck</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" id="1" onclick="autoClick(2)" style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId2" data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+                </td>
+            </tr>
+            <tr>
+              <td class="menuFood3"><img class="menuImage3" src="images/offerFood2.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName3">Sweet and Sour Pork</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sweet and Sour Pork</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/offerFood2.jpg" />
+                  <h3 class="card-header text-center">Sweet and Sour Pork</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" onclick="autoClick(3)" style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary"  id="closeId3" data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+              </td>
+              <td class="menuFood4"><img class="menuImage4" src="images/offerFood4.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName4">Mapo Tofu</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mapo Tofu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/offerFood4.jpg" />
+                  <h3 class="card-header text-center">Mapo Tofu</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" onclick="autoClick(4)" style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary"  id="closeId4" data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+                </td>
+            </tr>
+            <tr>
+              <td class="menuFood5"><img class="menuImage5" src="images/offerFood5.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName5">Chow Mein</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Chow Mein</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/offerFood5.jpg" />
+                  <h3 class="card-header text-center">Chow Mein</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" onclick="autoClick(5)" style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary"  id="closeId5" data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+              </td>
+              <td class="menuFood6"><img class="menuImage6" src="images/offerFood6.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName4">Chinese Hot Pot</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Chinese Hot Pot</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/offerFood6.jpg" />
+                  <h3 class="card-header text-center">Chinese Hot Pot</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark"onclick="autoClick(6)"style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId6"  data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+                </td>
+            </tr>
+
+            <tr>
+              <td class="menuFood7"><img class="menuImage7" src="images/bestSeller2.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName7">Spring Rolls</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Spring Rolls</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/bestSeller2.jpg" />
+                  <h3 class="card-header text-center">Spring Rolls</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark"onclick="autoClick(7)"style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId7"  data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+              </td>
+              <td class="menuFood8"><img class="menuImage8" src="images/offerFood7.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName4">Wonton Soup</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal8">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Wonton Soup</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/offerFood7.jpg" />
+                  <h3 class="card-header text-center">Wonton Soup</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark"onclick="autoClick(8)"style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId8"  data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+                </td>
+            </tr>
+
+            <tr>
+              <td class="menuFood9"><img class="menuImage9" src="images/offerFood8.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName9">Chicken Fried Rice</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal9">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Chicken Fried Rice</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/offerFood8.jpg" />
+                  <h3 class="card-header text-center">Chicken Fried Rice</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark"onclick="autoClick(9)"style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId9"  data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+              </td>
+              <td class="menuFood10"><img class="menuImage10" src="images/offerFood9.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName10">Char Siu</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal10">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Char Siu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/offerFood9.jpg" />
+                  <h3 class="card-header text-center">Char Siu</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark"onclick="autoClick(10)" style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId10"  data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+                </td>
+            </tr>
+
+            <tr>
+              <td class="menuFood11"><img class="menuImage11" src="images/bestSeller1.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName9">Shrimp Momos</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal11">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Shrimp Momos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/bestSeller1.jpg" />
+                  <h3 class="card-header text-center">Shrimp Momos</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark"onclick="autoClick(11)" style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId11"  data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+              </td>
+              <td class="menuFood12"><img class="menuImage12" src="images/menufood12.jpg" style="background-size: cover; height: 30vh;">
+              <br><div class="h4 foodName12">Red Braised Pork</div>
+               <!-- Modal Start-->
+              <div class="container">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal12">
+                  Peek
+                </button>
+                
+                <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Red Braised Pork</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                  class="card col-4 mx-auto shadow p-3 mb-5 bg-body rounded"
+                  style="width: 400px;height: 420px;"
+                >
+                  <img class="card-img-top" src="images/menufood12.jpg" />
+                  <h3 class="card-header text-center">Red Braised Pork</h3>
+                  <div class="card-body text-center">
+                    <p class="card-title">Price: 800</p>
+                    <p class="card-text">Offer valid till 16th July</p>
+                  </div>
+                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark"onclick="autoClick(12)" style="width: 100%; height: 100%;"><i class="fa fa-solid fa-cart-arrow-down" style="font-size: 115%; margin-right: 2%;"></i>Add to Cart</button>
+                        <button type="button" class="btn btn-outline-secondary" id="closeId12"  data-bs-dismiss="modal" style="width: 100%; height: 100%;">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal End-->
+                </td>
+            </tr>
+            
+          </tbody>
+      </table>
+      <br><br>
+      <!-- Footer -->
+    <div id="footer">
+      <footer class="text-center text-lg-start bg-dark text-light">
+        <!-- Section: Social media -->
+        <section
+          class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+        >
+          <!-- Left -->
+          <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+
+          <!-- Right -->
+          <div>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <i class="fas fa-gem me-3"></i>Ming’s Diner
+                </h6>
+                <p>
+                  500 Terry Francine St. <br />
+                  San Francisco, CA 94158
+                </p>
+                <p>
+                  Monday – Friday: (07:00AM – 10:00PM)<br />
+                  Saturday: (09:00AM – 10:00PM)<br />
+                  Sunday: (08:00PM –11:00PM)
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+                <p>
+                  <a href="#!" class="text-reset">Angular</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">React</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Vue</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Laravel</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+                <p>
+                  <a href="#!" class="text-reset">Pricing</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Account</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Orders</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Help</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                  <i class="fa fa-envelope me-3"></i>
+                  mingsdinerinfo@gmail.com
+                </p>
+                <p><i class="fa fa-phone me-3"></i> + 01 234 567 88</p>
+                <p><i class="fa fa-print me-3"></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-4"
+          style="background-color: rgba(0, 0, 0, 0.15)"
+        >
+          © 2023 Copyright:
+          <a class="text-reset fw-bold" href="http://localhost:5500/Assignments/Assignment1"
+            >Ming’sDiner.com</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+    <!-- Footer -->
+    
+  </body>
+</html>
