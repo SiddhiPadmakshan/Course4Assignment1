@@ -28,6 +28,7 @@
     <link rel="icon" href="images/vault-solid.svg">
     <script>
      $(document).ready(function(){
+            $('a.home').addClass('active');
             $('a').click(function() {
             $("a.active").removeClass("active");
             $(this).addClass('active');
@@ -44,7 +45,7 @@
         <div class="container-fluid justify-content-center">
           <ul class="navbar-nav justify-items">
             <li class="nav-item mr-3 pr-3">
-              <a class="nav-link" href="#home" style="font-weight: 500">Home</a>
+              <a class="nav-link home" href="#home" style="font-weight: 500">Home</a>
             </li>
             <li class="nav-item dropdown mr-3 pr-3">
               <div class="dropdown">
